@@ -15,7 +15,7 @@ resource "aws_ecs_task_definition" "my_task_definition" {
 [
   {
     "name": "my-container",
-    "image": "${aws_ecr_repository.my_repository.repository_url}:latest",
+    "image": "657590442862.dkr.ecr.us-east-1.amazonaws.com/test:latest",
     "portMappings": [
       {
         "containerPort": 80,
@@ -35,7 +35,7 @@ DEFINITION
 
 # Create an ECS service
 resource "aws_ecs_service" "my_service" {
-  name            = "my-service"  # Update with your desired service name
+  name            = "POC-service"  # Update with your desired service name
   cluster         = aws_ecs_cluster.my_cluster.id
   task_definition = aws_ecs_task_definition.my_task_definition.arn
   desired_count   = 1
@@ -55,7 +55,7 @@ resource "aws_ecr_repository" "my_repository" {
 
 # Create IAM role for task execution
 resource "aws_iam_role" "my_task_execution_role" {
-  name = "my-task-execution-role"  # Update with your desired role name
+  name = "POC"  # Update with your desired role name
   assume_role_policy = <<POLICY
 {
   "Version": "2012-10-17",
