@@ -140,7 +140,7 @@ resource "aws_lb_listener" "poc" {
 # Define provider for AWS
 provider "aws" {
   region = "us-east-1"  # Update with your desired region
-  shared_credentials_file = "~/.aws/credentials"
+  shared_credentials_files = "~/.aws/credentials"
 }
 
 # Create an ECS cluster
