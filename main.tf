@@ -210,7 +210,7 @@ resource "aws_iam_role" "my_task_execution_role" {
   name = "Test"  # Update with your desired role name
   assume_role_policy = <<POLICY
 {
-  "Version": "1.0",
+  "Version": "2012-10-17",
   "Statement": [
     {
       "Action": "sts:AssumeRole",
