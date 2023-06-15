@@ -132,7 +132,7 @@ resource "aws_lb_listener" "poc" {
   protocol          = "HTTP"
 
   default_action {
-    target_group_arn = aws_lb_target_group.hello_world.id
+    target_group_arn = aws_lb_target_group.poc.id
     type             = "forward"
   }
 }
