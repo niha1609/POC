@@ -182,7 +182,7 @@ resource "aws_ecs_task_definition" "my_task_definition" {
 [
   {
     "name": "my-container",
-    "image": "657590442862.dkr.ecr.us-east-1.amazonaws.com/test:2.0"
+    "image": "657590442862.dkr.ecr.us-east-1.amazonaws.com/test:2.0",
     "portMappings": [
       {
         "containerPort": 8096,
