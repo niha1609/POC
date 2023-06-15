@@ -161,7 +161,7 @@ resource "aws_ecs_service" "my_service" {
   network_configuration {
     subnets         = aws_subnet.private.*.id  # Update with your desired subnets
     security_groups = [aws_security_group.ecs_sg.id]  # Update with your desired security groups
-    assign_public_ip = true
+    #assign_public_ip = true
   }
 
   load_balancer {
