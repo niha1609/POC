@@ -196,7 +196,7 @@ resource "aws_ecs_task_definition" "my_task_definition" {
 ]
 DEFINITION
   requires_compatibilities = ["EC2"]  # Use "EC2" if you prefer EC2 launch type
-  network_mode             = "awsvpc"
+  network_mode             = "bridge"
   execution_role_arn       = aws_iam_role.my_task_execution_role.arn
 }
 
