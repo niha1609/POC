@@ -5,7 +5,7 @@ data "aws_availability_zones" "available_zones" {
 
 # ALB Security Group: Edit to restrict access to the application
 resource "aws_vpc" "default" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = "172.31.0.0/16"
 }
 
 resource "aws_subnet" "public" {
@@ -35,7 +35,7 @@ resource "aws_route" "internet_access" {
 
 resource "aws_eip" "gateway" {
   count      = 2
-  vpc        = true
+  #vpc        = true
   #depends_on = [aws_internet_gateway.gateway]
 }
 
@@ -139,8 +139,8 @@ resource "aws_lb_listener" "poc" {
 
 # Define provider for AWS
 provider "aws" {
-  access_key = "AKIAZSG3R3NXIBEFZ3EW"
-  secret_key = "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"
+  access_key = "AKIAZ45PASR62HQ33ZFF"
+  secret_key = "+IYHiVREPZlj0GFN0VnSL4KDwMerY/DYjuMCg9cr"
   region = "us-east-1"  # Update with your desired region
   #shared_credentials_files = "~/.aws/credentials"
 }
