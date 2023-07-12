@@ -113,7 +113,7 @@ resource "aws_lb_target_group" "poc" {
   port        = 8096
   protocol    = "HTTP"
   vpc_id      = aws_vpc.default.id
-  target_type = "ip"
+  #target_type = "ip"
 
   health_check {
     healthy_threshold = 2
