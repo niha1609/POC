@@ -139,8 +139,8 @@ resource "aws_lb_listener" "poc" {
 
 # Define provider for AWS
 provider "aws" {
-  access_key = ""
-  secret_key = ""
+  #access_key = ""
+  #secret_key = ""
   region = "us-east-1"  # Update with your desired region
   #shared_credentials_files = "~/.aws/credentials"
 }
