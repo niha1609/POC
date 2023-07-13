@@ -207,7 +207,7 @@ DEFINITION
 
 # Create IAM role for task execution
 resource "aws_iam_role" "my_task_execution_role" {
-  name = "Test"  # Update with your desired role name
+  name = "Test-poc"  # Update with your desired role name
   assume_role_policy = <<POLICY
 {
   "Version": "2012-10-17",
